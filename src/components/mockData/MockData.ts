@@ -111,7 +111,7 @@ export const mockAccounts: Account[] = [
         dateTime: 'April 25, 2025',
         description: 'Credit from Malik corporation limited - XXXXXX1783',
         status: 'Success',
-        amount_usd: 3500000.0
+        amount_usd: 35000000.0
       },
       {
         dateTime: 'April 25, 2025',
