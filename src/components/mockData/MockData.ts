@@ -91,7 +91,7 @@ export const mockAccounts: Account[] = [
     transaction_history: [
       {
         dateTime: 'April 30, 2025',
-        description: 'Best Buy - XXXXXX3789',
+        description: 'Starbucks - XXXXXX3789',
         status: 'Success',
         amount_usd: -50.0
       },
