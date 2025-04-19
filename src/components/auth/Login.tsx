@@ -59,8 +59,8 @@ export default function Login() {
     <div className="">
       <Header />
       <div className="h-screen bg-white">
-        <div className="">
-          <div className="">{error && <p className="text-[20px] my-7 text-center flex items-center justify-center text-red-400">{error}</p>}</div>
+        <div className="pt-5">
+          <div className="">{error && <p className="text-[20px] my-7 mt-2 text-center flex items-center justify-center text-red-400">{error}</p>}</div>
           <div className="bg-[#f7f7f7] mx-auto flex flex-col justify-center items-center rounded-s max-w-[400px] p-7 px-4">
             <div className="border w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-white">
               <Image src="https://i.imgur.com/eiMpe8j.png" width={19} height={24} className="w-[19px] h-[24px]" alt="key" />

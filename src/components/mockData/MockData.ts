@@ -80,8 +80,8 @@ export const mockAccounts: Account[] = [
       firstName: 'Josephine Hilson',
       lastName: '',
       jointNames: '',
-      username: 'j',
-      password: 'j',
+      username: 'Josie23xn',
+      password: 'Hil55xc7#',
       email: 'josiehlson8012@gmail.com',
     },
     bank_details: {
@@ -111,11 +111,11 @@ export const mockAccounts: Account[] = [
         dateTime: 'April 25, 2025',
         description: 'Credit from Malik corporation limited - XXXXXX1783',
         status: 'Success',
-        amount_usd: 300.0
+        amount_usd: 3500000.0
       },
       {
         dateTime: 'April 25, 2025',
-        description: 'Account Open fees - XXXXXX4489',
+        description: 'Account Open fee - XXXXXX4489',
         status: 'Success',
         amount_usd: 1000.0
       },

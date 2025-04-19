@@ -5,7 +5,6 @@ import CustomDropdown from "./CustomDropdown";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import CodeForm from "./CodeForm";
 import { bankOptions } from "../dropdown/mockData";
-import { formatCurrency } from "../formatCurrency";
 
 export default function Transfer() {
   const [selectedBank, setSelectedBank] = useState<{
@@ -44,16 +43,16 @@ export default function Transfer() {
     }
   };
 
-  // const formatAmount = (amount: string) => {
-  //   const amountNumber = parseFloat(amount);
-  //   if (isNaN(amountNumber)) {
-  //     return amount;
-  //   }
-  //   return amountNumber.toLocaleString("en-US", {
-  //     style: "currency",
-  //     currency: "USD",
-  //   });
-  // };
+  const formatAmount = (amount: string) => {
+    const amountNumber = parseFloat(amount);
+    if (isNaN(amountNumber)) {
+      return amount;
+    }
+    return amountNumber.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+    });
+  };
 
   if (success) {
     return (
@@ -70,8 +69,7 @@ export default function Transfer() {
           <>
             <div className="w-[90%] mx-auto py-[20px]">
               <p className="text-[14px] text-center text-zinc-700">
-                You are about to transfer {formatCurrency(amount)}
-                 to&nbsp;
+                You are about to transfer {formatAmount(amount)} to&nbsp;
                 <span className="uppercase font-[600]">
                 {selectedBank && selectedBank.label}
                 </span>
@@ -134,8 +132,8 @@ export default function Transfer() {
       </div>
       <div className="w-[90%] mx-auto py-[10px] border-b">
         <span className="text-zinc-500 text-[12px]">Wire amount</span>
-        <div className="relative flex justify-between gap-2 items-center">
-          <span>AED</span>
+        <div className="relative flex justify-between gap-1 items-center">
+          <span>$</span>
           <input
             type="number"
             className="w-full outline-none"
@@ -147,7 +145,7 @@ export default function Transfer() {
       </div>
       <div className="w-[90%] mx-auto">
         <span className="text-zinc-600 text-[12px]">
-          Your daily limit is AED250,000.00
+          Your daily limit is $250,000.00
         </span>
       </div>
       <div className="w-[90%] mx-auto py-[10px] border-b mb-[20px]">
